@@ -1,0 +1,27 @@
+.status {
+  background-color: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.friendList {
+  background-color: azure;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: 40px;
+  padding-top: 10px;
+}
