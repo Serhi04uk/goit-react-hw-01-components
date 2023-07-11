@@ -2,16 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import './index.css';
-import { Prof } from 'components/Profile/Profile';
-import { Stat } from 'components/Statistics/Statistics';
-import { Friends } from 'components/FriendList/FriendList';
-import { Trans } from 'components/Transaction/Transaction';
+import { App } from 'components/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Prof></Prof>
-    <Stat></Stat>
-    <Friends></Friends>
-    <Trans></Trans>
+    <App></App>
   </React.StrictMode>
 );

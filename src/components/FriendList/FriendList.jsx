@@ -1,7 +1,8 @@
 import data from './data.json';
 import css from './friend.module.css';
+import PropTypes from 'prop-types';
 
-const FriendList = ({ isOnline }) => {
+const FriendList = ({ id, isOnline, avatar, name }) => {
   return data.map(fri => {
     return (
       <li className={css.item} key={fri.id}>
@@ -19,4 +20,11 @@ export const Friends = () => {
       <FriendList />
     </ul>
   );
+};
+
+FriendList.propTypes = {
+  id: PropTypes.string,
+  isOnline: PropTypes.string,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
 };

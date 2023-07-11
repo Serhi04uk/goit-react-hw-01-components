@@ -1,10 +1,10 @@
-.transaction-history {
+.transaction {
   width: 800px;
   margin: auto;
   background-color: burlywood;
 }
 
-.tran-list {
+.tran {
   background-color: chocolate;
   height: 50px;
 }

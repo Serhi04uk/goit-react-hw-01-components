@@ -1,30 +1,38 @@
+import PropTypes from 'prop-types';
 import user from './user.json';
-import './prof.css';
+import css from './prof.module.css';
 
-export const Prof = () => {
+export const Prof = ({ avatar, username, tag, location }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={user[0].avatar} alt="User avatar" className="avatar" />
-        <p className="name">{user[0].username}</p>
-        <p className="tag">{user[0].tag}</p>
-        <p className="location">{user[0].location}</p>
+    <div className={css.profile}>
+      <div className={css.description}>
+        <img src={user.avatar} alt="User avatar" className="avatar" />
+        <p className={css.name}>{user.username}</p>
+        <p className={css.tag}>{user.tag}</p>
+        <p className={css.location}>{user.location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={css.stats}>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{user[0].stats.followers}</span>
+          <span className={css.label}>Followers</span>
+          <span className={css.quantity}>{user.stats.followers}</span>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{user[0].stats.views}</span>
+          <span className={css.label}>Views</span>
+          <span className={css.quantity}>{user.stats.views}</span>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{user[0].stats.likes}</span>
+          <span className={css.label}>Likes</span>
+          <span className={css.quantity}>{user.stats.likes}</span>
         </li>
       </ul>
     </div>
   );
+};
+
+Prof.propTypes = {
+  avatar: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
 };
