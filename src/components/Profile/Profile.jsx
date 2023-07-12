@@ -1,4 +1,4 @@
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './prof.module.css';
 
 export const Prof = ({ avatar, username, tag, location, stats }) => {
