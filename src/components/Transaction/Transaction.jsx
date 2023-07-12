@@ -1,20 +1,7 @@
-import data from './data.json';
 import css from './Transaction.module.css';
 import PropTypes from 'prop-types';
 
-const Transact = ({ id, type, amount, currency }) => {
-  return data.map(tip => {
-    return (
-      <tr className={css.tran} key={tip.id}>
-        <td>{tip.type}</td>
-        <td>{tip.amount}</td>
-        <td>{tip.currency}</td>
-      </tr>
-    );
-  });
-};
-
-export const Trans = () => {
+export const Trans = ({ items }) => {
   return (
     <table className={css.transaction}>
       <thead>
@@ -26,15 +13,24 @@ export const Trans = () => {
       </thead>
 
       <tbody>
-        <Transact />
+        {items.map(tip => {
+          return (
+            <tr className={css.tran} key={tip.id}>
+              <td>{tip.type}</td>
+              <td>{tip.amount}</td>
+              <td>{tip.currency}</td>
+            </tr>
+          );
+        })}
+        ;
       </tbody>
     </table>
   );
 };
 
-Transact.propTypes = {
+Trans.propTypes = {
   id: PropTypes.string,
   type: PropTypes.string,
-  amount: PropTypes.string,
+  amount: PropTypes.number,
   currency: PropTypes.string,
 };
