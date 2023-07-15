@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes, { number } from 'prop-types';
 import css from './prof.module.css';
 
 export const Prof = ({ avatar, username, tag, location, stats }) => {
@@ -31,8 +31,12 @@ export const Prof = ({ avatar, username, tag, location, stats }) => {
 
 Prof.propTypes = {
   avatar: PropTypes.string.isRequired,
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  stats: PropTypes.object,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
